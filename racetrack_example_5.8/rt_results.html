@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Chapter 5 in Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto.</title>
+    <META name="description" content="A solution manual for the problems from the textbook: Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto">
+    <META name="keywords" content="solution, solutions, exercise, exercises, problem, problems, manual, reinforcement, learning, introduction, sutton, barto">
+  </head>
+  <!-- solution solutions exercise exercises problem problems manual reinforcement learning introduction sutton barto -->
+
+  <body>
+
+  Here we present some very simple results with the racetrack example.  We first constructed
+  a sample racetrack similar to the ones that are presented in the book.  The allowable spots
+  where our "car" can be found are 
+
+  <CENTER>
+  <IMG src="Images/race_track.gif" alt="">
+  </CENTER><BR>
+
+  We next implement a Monte Carlo learning algorithm to estimate the action value function
+  of a vechicle driving on this track.  From that we can estimate the greedy policy that
+  maximized this action value function.   As a means of visualizing the solution computed
+  we average out the possible actions and velocities to obtain an state value function that
+  depends on position only.  When we plot this we obtain
+
+  <CENTER>
+  <IMG src="Images/avg_state_value_fn_12000000.gif" alt="">
+  </CENTER><BR>
+
+  Interpreting the values on this graph as the cost to go from the given state to the
+  exit of the race track we see the intuitive fact that states closer to the exit are
+  cheaper while thoes further from the exit are more expensive.  These experiments are
+  not complete because some of the states may have had very few samples pass through
+  them and consequently the state value function might not be estimated very accuratly.
+  Obviously, additional analysis could be done to assess the quality of our solution.  
+
+  <hr>
+  <address><a href="mailto:wax@alum.mit.edu">John Weatherwax</a></address>
+<!-- Created: Sat Apr  2 11:09:15 EST 2005 -->
+<!-- hhmts start -->
+Last modified: Sun May 15 08:46:34 EDT 2005
+<!-- hhmts end -->
+  </body>
+</html>
