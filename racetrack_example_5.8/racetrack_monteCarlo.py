@@ -129,7 +129,7 @@ if __name__ == '__main__':
 	gamma = 0.5
 	count = 0
 	otherCount = 0
-	while count < 10000:
+	while count < 10000000:
 		print("count: ", count, "  otherCount: ", otherCount)
 		episode = mc.generateEpisode()
 		# print(mc.finish)
@@ -147,7 +147,7 @@ if __name__ == '__main__':
 			mc.C[ind1,ind2] = mc.C[ind1,ind2] + W
 			mc.Q[ind1,ind2] = mc.Q[ind1,ind2] + W/mc.C[ind1,ind2]*(G - mc.Q[ind1,ind2])
 			targetAction = mc.targetPolicy(episode[i])
-			print(targetAction-mc.PossibleActions[ind2])
+			# print(targetAction-mc.PossibleActions[ind2])
 			if np.sum(np.absolute(targetAction-mc.PossibleActions[ind2])) == 0:
 				targetPI = 1
 			else:
@@ -157,4 +157,17 @@ if __name__ == '__main__':
 				break
 			otherCount += 1
 		count += 1
-	np.savetxt('q.txt', mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		if(count == 9999):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 99999):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 999999):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 9999999):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 50000):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 500000):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
+		elif(count == 5000000):
+			np.savetxt('q_%d.txt'% count, mc.Q, fmt='%.18e', delimiter=' ', newline='\n')
