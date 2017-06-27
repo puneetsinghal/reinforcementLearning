@@ -132,7 +132,7 @@ if __name__ == '__main__':
 	while count < 10000:
 		print("count: ", count, "  otherCount: ", otherCount)
 		episode = mc.generateEpisode()
-	# print(mc.finish)
+		# print(mc.finish)
 		# print(episode)
 		# state : {x, y, vx, vy}
 		# action-value function q(every state): vector of 36*9 elements for every grid

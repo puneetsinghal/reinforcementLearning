@@ -1,19 +1,21 @@
 import copy
-
+from IPython import embed
 import numpy as np
 import matplotlib.pyplot as plt
-
 alpha = 0.7
 beta = 0.5
 rSearch = 2
 rWait = 1
 discount = np.linspace(0.1, 1, 20, endpoint=False)
 
+
+embed()
 # Initialization
 initialValue = [0, 0]
 
 iteration = np.empty(shape=(1,))
 value = np.empty(shape=(2,))
+embed()
 # Value Iteration
 for i in range(0,discount.size):
 	itr = 0
