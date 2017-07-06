@@ -1,15 +1,16 @@
 import copy
-from IPython import embed
+# from IPython import embed
 import numpy as np
 import matplotlib.pyplot as plt
+
 alpha = 0.7
 beta = 0.5
 rSearch = 2
 rWait = 1
 discount = np.linspace(0.1, 1, 20, endpoint=False)
 
+# embed()
 
-embed()
 # Initialization
 initialValue = [0, 0]
 
@@ -33,7 +34,6 @@ for i in range(0,discount.size):
 		itr += 1
 		print(itr, termCond, oldValue, newValue)
 	iteration = np.hstack((iteration, np.array(itr)))
-	# for j in range(1,len(newValue)):
 	value = np.vstack((value, np.array(newValue)))
 
 final_index = discount.size + 1
